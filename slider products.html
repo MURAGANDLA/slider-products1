@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 20px;
+
+
+    }
+    h1{
+        font-size: 3rem;
+        line-height: 2;
+        text-align: center;
+        color: rgb(255, 0, 89);
+    }
+    main {
+        background-color: #ebbbbb;
+        padding: 4rem 0;
+    }
+    .slide-container{
+        max-width: 1000px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .arrow{
+        width: 2rem;
+        margin: 0 1rem;
+    }
+    section{
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+     section::-webkit-scrollbar{
+        margin-top: 100px;
+        height: 5px;
+        width: 2px;
+        border: 1px solid #d5d5d5;
+        background: #d5d5d5;
+
+     }
+     section::-webkit-scrollbar-track{
+        --webkit-box-shadow: inset 0 0 6px rgba(0,0,0.3)
+     }
+     section::-webkit-scrollbar-thumb{
+        background-color: var(--color-primary);
+        outline: 1px solid #eee;
+     }
+     section .thumbnail {
+        flex: 0 0 auto;
+        object-fit: cover;
+        cursor: pointer;
+        margin: 5px;
+        border: 1px solid var(--black);
+        border-radius: 3px;
+        overflow: hidden;
+        transform: scale(.95);
+        transition: all .3s;
+
+     }
+     section .thumbnail:hover{
+        transform: scale(1);
+     }
+     .product-details{
+        
+        text-align: center;
+        align-items: center;
+        padding-bottom: 4rem;
+        padding-right: 3rem;
+        background-color: #e46e6e;
+        margin-top: 20px;
+        height: 100px;
+        width: 200px;
+        margin-right: 300px; 
+
+     }
+     .watch{
+       height: 500px;
+       width: 300px;
+       background-color: rgb(124, 77, 14);
+       margin-left: 40px;   
+       text-align: center;
+       border-radius: 15px;
+      
+     }
+     .chain{
+        height: 500px;
+        width: 300px;
+        background-color: rgb(85, 9, 224);
+        margin-left: 40px;  
+        text-align: center;
+        border-radius: 15px;
+      
+     }
+     .product-details{
+        margin-top: 350px;
+        margin-right: 270px;  
+     }
+     .ton{
+        height: 500px;
+        width: 300px;
+        background-color: rgb(78, 135, 168);
+        margin-left: 40px;
+        text-align: center;
+        border-radius: 15px;
+      
+        }
+        .mobile{
+        height: 500px;
+        width: 300px;
+        background-color: rgb(214, 16, 16);
+        margin-left: 40px;
+        text-align: center;
+        border-radius: 15px;
+      
+        }
+        .earbuds{
+        height: 500px;
+        width: 300px;
+        background-color: rgb(124, 111, 148);
+        margin-left: 40px;
+        text-align: center;
+        border-radius: 15px;
+      
+        }
+        .bag{
+        height: 500px;
+        width: 300px;
+        background-color: rgb(209, 16, 32);
+        margin-left: 40px;
+        text-align: center;
+        border-radius: 15px;
+      
+        }
+        .laptop{
+        height: 500px;
+        width: 300px;
+        background-color: rgb(177, 221, 18);
+        margin-left: 40px;
+        text-align: center;
+        border-radius: 15px;
+      
+        }
+        .shoe{
+        height: 500px;
+        width: 300px;
+        background-color: rgb(59, 182, 141);
+        margin-left: 40px;
+        text-align: center;
+        border-radius: 15px;
+      
+        }
+        .tv{
+        height: 500px;
+        width: 300px;
+        background-color: green;
+        margin-left: 40px;
+        text-align: center;
+        border-radius: 15px;
+      
+        }
+        .fridge{
+        height: 500px;
+        width: 300px;
+        background-color: blue;
+        margin-left: 40px;
+        text-align: center;
+        border-radius: 15px;
+      
+        }
+        .tshirt{
+        height: 500px;
+        width: 300px;
+        background-color: rgb(206, 27, 81);
+        margin-left: 40px;
+        text-align: center;
+        border-radius: 15px;
+      
+        }
+   
+     .product-details h2{
+        font-size: 2.2rem;
+        font-weight: 600;
+     }
+     
+  .product-details p{
+    font-size: 1.6rem;
+    padding-bottom: 1rem;
+    color: green;
+    font-weight: 700;
+  }
+  button{
+    background-color: greenyellow;
+    font-style: initial;
+    font-size: 1rem;
+  }
+     
+       
+</style>
+<body>
+    <h1>Product Slider</h1>
+    <main>
+        <div class="slide-container">
+            <img src="images/arrow.jpg" alt="left"
+            id="slide-left" class="arrow">
+            <section class="container" id="slider">
+                <div class="watch">
+                    <img src="images/watch.png" height="350px" width="300px" >
+                               
+                
+                    <h2>Demo Product</h2>
+                    <p><span>$59.99</span></p>
+                    <button style="border-radius: 5px;">Add to Cart</button>
+                
+            </div>
+                <div class="tshirt">
+                    <img src="images/tshirt" height="350px" width="300px">
+                
+                    <h2>Demo Product</h2>
+                    <p><span>$59.99</span></p>
+                    <button style="border-radius: 5px;">Add to Cart</button>
+                </div>
+                <div class="chain">
+                    <img src="images/chain" height="350px" width="300px">
+                
+                
+                    <h2>Demo Product</h2>
+                    <p><span>$59.99</span></p>
+                    <button style="border-radius: 5px;">Add to Cart</button>
+                </div>
+                <div class="ton">
+                    <img src="images/ton.jpg" height="350px" width="300px">
+                
+               
+                    <h2>Demo Product</h2>
+                    <p><span>$59.99</span></p>
+                    <button style="border-radius: 5px;">Add to Cart</button>
+                </div>
+                <div class="mobile">
+                    <img src="images/mobile.jpg" height="350px" width="300px">
+                
+                    <h2>Demo Product</h2>
+                    <p>$39<span>$59.99</span></p>
+                    <button style="border-radius: 5px;">Add to Cart</button>
+                </div>
+                <div class="earbuds">
+                    <img src="images/earbuds.jpg" height="350px" width="300px">
+               
+                    <h2>Demo Product</h2>
+                    <p><span>$59.99</span></p>
+                    <button style="border-radius: 5px;">Add to Cart</button>
+                </div>
+                <div class="bag">
+                    <img src="images/bag" height="350px" width="300px">
+               
+                    <h2>Demo Product</h2>
+                    <p><span>$59.99</span></p>
+                    <button style="border-radius: 5px;">Add to Cart</button>
+                </div>
+                <div class="laptop">
+                    <img src="images/laptop.jpg" height="350px" width="300px">
+               
+                    <h2>Demo Product</h2>
+                    <p><span>$59.99</span></p>
+                    <button style="border-radius: 5px;">Add to Cart</button>
+                </div>
+                <div class="shoe">
+                    <img src="images/shoe" height="350px" width="300px">
+                
+                    <h2>Demo Product</h2>
+                    <p><span>$59.99</span></p>
+                    <button style="border-radius: 5px;">Add to Cart</button>
+                </div>
+                <div class="tv">
+                    <img src="images/tv.jpg" height="350px" width="300px">
+               
+                    <h2>Demo Product</h2>
+                    <p><span>$59.99</span></p>
+                    <button style="border-radius: 5px;">Add to Cart</button>
+                </div>
+                <div class="fridge">
+                    <img src="images/fridge.jpeg" height="350px" width="300px">
+               
+                    <h2>Demo Product</h2>
+                    <p><span>$59.99</span></p>
+                    <button style="border-radius: 5px;">Add to Cart</button>
+                </div>
+                </section>
+                <img src="images/arrow1.jpg" alt="right"
+            id="slide-right" class="arrow">
+        </div>
+    </main>
+    <script>
+
+let thumbnails = document.getElementsByClassName("thumbnail");
+let slider = document.getElementById("slider");
+let buttonRight = document.getElementById("slide-right");
+let buttonLeft= document.getElementById("slide-left");
+buttonLeft.addEventListener("click", () => {
+slider.scrollLeft -= 125;
+});
+buttonRight.addEventListener("click", () => {
+slider.scrollLeft += 125;
+});
+const maxScrollleft  = slider.scrollWidth - slider.clientWidth;
+ 
+</script>
+</body>  
+</html>
